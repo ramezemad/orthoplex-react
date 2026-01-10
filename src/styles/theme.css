@@ -1,0 +1,20 @@
+:root {
+  --primary: #0b1f3b;     /* Dark Blue */
+  --secondary: #0fa3b1;   /* Teal */
+  --background: #f5f7fa;
+  --text-dark: #1a1a1a;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--background);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
