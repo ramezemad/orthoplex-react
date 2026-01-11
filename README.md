@@ -111,8 +111,6 @@ Dashboard is protected via ProtectedRoute
 
 📊 Dashboard Data & Charts
 
-API: https://jsonplaceholder.typicode.com/posts
-
 Data is fetched once using a centralized API layer
 
 Data is transformed into analytics metrics:
