@@ -54,7 +54,11 @@ Recharts	Charts & graphs
 Vitest	Testing framework
 Testing Library	UI testing
 ESLint	Code quality
+
+
 📁 Project Structure
+
+
 orthoplex-react/
 ├── public/
 │   ├── assets/
