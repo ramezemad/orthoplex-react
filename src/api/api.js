@@ -21,5 +21,6 @@ export const loginUser = async (username, password) => {
   throw new Error("Invalid credentials");
 };
 
-export const fetchData = () =>
-  axios.get(`${API_BASE_URL}/posts?_limit=5`);
+export const fetchData = () => {
+  return axios.get(`${API_BASE_URL}/posts?_limit=5`);
+};

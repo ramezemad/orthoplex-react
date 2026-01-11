@@ -1,16 +1,207 @@
-# React + Vite
+🧩 Orthoplex Frontend Challenge – React Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React + Vite frontend application built for the Orthoplex Solutions Frontend Challenge.
+The project demonstrates clean architecture, authentication flow, protected routes, data visualization, and testing best practices.
 
-Currently, two official plugins are available:
+🌐 Live Features Overview
+✅ Authentication
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Login & Registration flow
 
-## React Compiler
+Strong client-side validation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Auth state persisted in localStorage
 
-## Expanding the ESLint configuration
+Protected dashboard route
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📊 Dashboard
+
+Fetches real data from public API
+
+Transforms API data for analytics
+
+Displays data using charts (Recharts)
+
+Responsive, modern card-based layout
+
+🎨 UI & Branding
+
+Orthoplex logo & brand header
+
+Full-page background wallpaper
+
+Clean enterprise color palette
+
+Loading indicators & favicon states
+
+🧪 Testing
+
+Unit & integration tests using Vitest
+
+API mocking
+
+Auth context testing
+
+Dashboard behavior validation
+
+🧱 Tech Stack
+Technology	Purpose
+React 19	UI framework
+Vite	Build tool & dev server
+React Router v7	Routing
+Axios	HTTP client
+Recharts	Charts & graphs
+Vitest	Testing framework
+Testing Library	UI testing
+ESLint	Code quality
+📁 Project Structure
+orthoplex-react/
+├── public/
+│   ├── assets/
+│   │   ├── orthoplex-logo.png
+│   │   └── orthoplex-bg.jpg
+│   ├── favicon.ico
+│   └── favicon-loading.ico
+│
+├── src/
+│   ├── api/
+│   │   └── api.js
+│   │
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   └── Loader.jsx
+│   │
+│   ├── context/
+│   │   └── AuthContext.jsx
+│   │
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Dashboard.jsx
+│   │   └── Dashboard.test.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   └── Dashboard.css
+│
+├── package.json
+├── vite.config.js
+└── README.md
+
+🔐 Authentication Flow
+
+User registers with validation:
+
+Username ≥ 3 characters
+
+Valid email format
+
+Password ≥ 8 chars, uppercase + number
+
+Login stores user data in localStorage
+
+AuthContext manages global auth state
+
+Dashboard is protected via ProtectedRoute
+
+📊 Dashboard Data & Charts
+
+API: https://jsonplaceholder.typicode.com/posts
+
+Data is fetched once using a centralized API layer
+
+Data is transformed into analytics metrics:
+
+titleLength
+
+bodyLength
+
+Charts Used:
+
+Line Chart → Title length trend
+
+Bar Chart → Body length comparison
+
+All charts are:
+
+Responsive
+
+Accessible
+
+Reusable
+
+Tested
+
+🧪 Testing Strategy
+Tools:
+
+Vitest
+
+@testing-library/react
+
+vi.mock() for API mocking
+
+Coverage Includes:
+
+Loader display during fetch
+
+API call success & failure
+
+Empty data handling
+
+Auth-based rendering
+
+API call count validation
+
+Run tests with:
+
+npm run test
+
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/orthoplex-react.git
+cd orthoplex-react
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Start Development Server
+npm run dev
+
+
+App will run at:
+
+http://localhost:5173
+
+🧠 Design Decisions
+
+Vite for faster builds and HMR
+
+Context API for auth (simple & effective)
+
+Recharts for clean data visualization
+
+CSS Modules approach for scoped styling
+
+Single API source of truth (used by UI & tests)
+
+🖼 Loading & Favicon Handling
+
+favicon-loading.ico shown during page load
+
+Automatically switches to favicon.ico once loaded
+
+Enhances perceived performance & UX
+
+🚀 Future Improvements
+
+Backend integration (JWT, refresh tokens)
+
+Role-based access control
+
+Pagination & filtering
+
+Dark/light theme toggle
+
+Proper database
