@@ -58,7 +58,7 @@ ESLint	Code quality
 
 📁 Project Structure
 
-
+```
 orthoplex-react/
 ├── public/
 │   ├── assets/
@@ -92,7 +92,7 @@ orthoplex-react/
 ├── package.json
 ├── vite.config.js
 └── README.md
-
+```
 🔐 Authentication Flow
 
 User registers with validation:
